@@ -1,8 +1,8 @@
 package item2;
 
-import effective.java.item2.NutritionFactsWithBeans;
-import effective.java.item2.NutritionFactsWithBuilder;
-import effective.java.item2.NutritionFactsWithConstructor;
+import effective.java.builder.NutritionFactsWithBeans;
+import effective.java.builder.NutritionFactsWithBuilder;
+import effective.java.builder.NutritionFactsWithConstructor;
 import org.junit.Before;
 import org.junit.Test;
 
