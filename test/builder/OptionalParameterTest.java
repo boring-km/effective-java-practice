@@ -1,4 +1,4 @@
-package item2;
+package builder;
 
 import effective.java.builder.NutritionFactsWithBeans;
 import effective.java.builder.NutritionFactsWithBuilder;
