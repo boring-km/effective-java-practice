@@ -22,8 +22,6 @@ public class Holiday {
 
     @Override
     public int hashCode() {
-        int result = Integer.hashCode(month);
-        result = 31 * result + Integer.hashCode(day);
-        return result;
+        return Objects.hash(month, day);
     }
 }
