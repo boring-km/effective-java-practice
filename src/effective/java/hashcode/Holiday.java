@@ -20,8 +20,16 @@ public class Holiday {
         return month == holiday.month && day == holiday.day;
     }
 
+    private int hashCode;
+
     @Override
     public int hashCode() {
-        return Objects.hash(month, day);
+        int result = hashCode;
+        if (result == 0) {
+            result = Integer.hashCode(month);
+            result = 31 * result + Integer.hashCode(day);
+            hashCode = result;
+        }
+        return result;
     }
 }
