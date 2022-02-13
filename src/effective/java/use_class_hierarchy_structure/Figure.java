@@ -1,33 +1,33 @@
 package effective.java.use_class_hierarchy_structure;
 
-public class Figure {
-    enum Shape { RECTANGLE, CIRCLE };
+abstract class Figure {
+    abstract double area();
+}
 
-    final Shape shape;
+class Circle extends Figure {
+    final double radius;
 
-    double length;
-    double width;
-    double radius;
-
-    public Figure(double radius) {
-        shape = Shape.CIRCLE;
+    public Circle(double radius) {
         this.radius = radius;
     }
 
-    public Figure(double length, double width) {
-        shape = Shape.RECTANGLE;
+    @Override
+    double area() {
+        return Math.PI * (radius * radius);
+    }
+}
+
+class Rectangle extends Figure {
+    final double length;
+    final double width;
+
+    public Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
     }
 
+    @Override
     double area() {
-        switch (shape) {
-            case RECTANGLE:
-                return length * width;
-            case CIRCLE:
-                return Math.PI * (radius * radius);
-            default:
-                throw new AssertionError(shape);
-        }
+        return length * width;
     }
 }
