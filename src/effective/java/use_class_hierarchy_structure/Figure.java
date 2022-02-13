@@ -31,3 +31,9 @@ class Rectangle extends Figure {
         return length * width;
     }
 }
+
+class Square extends Rectangle {
+    Square(double side) {
+        super(side, side);
+    }
+}

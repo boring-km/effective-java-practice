@@ -85,3 +85,19 @@ class Rectangle extends Figure {
     }
 }
 ```
+
+### 정사각형이 추가가 된다면?
+
+```java
+class Square extends Rectangle {
+    Square(double side) {
+        super(side, side);
+    }
+}
+```
+
+- 간단하게 추가가 되었다.
+
+### 핵심 정리
+- 태그 달린 클래스를 써야 하는 상황은 거의 없다.
+- 만약 보인다면 계층구조로 대체하는 방법을 생각해보자.
